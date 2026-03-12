@@ -15,7 +15,7 @@ import { TodoService } from './todo.service';
 import { CreateTodoDto } from './dto/create-todo.dto';
 import { UpdateTodoDto } from './dto/update-todo.dto';
 
-@UseGuards(AuthGuard('jwt')) // ← все маршруты защищены
+@UseGuards(AuthGuard('jwt'))
 @Controller('todos')
 export class TodoController {
   constructor(private todoService: TodoService) {}
