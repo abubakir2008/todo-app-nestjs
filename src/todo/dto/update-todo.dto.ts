@@ -6,6 +6,10 @@ export class UpdateTodoDto {
   title?: string;
 
   @IsOptional()
+  @IsString()
+  description?: string;
+
+  @IsOptional()
   @IsBoolean()
   isDone?: boolean;
 }
