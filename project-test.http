@@ -1,0 +1,48 @@
+### Регистрация
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "123456"
+}
+
+### Логин (скопируй токен из ответа)
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "123456"
+}
+
+### Создать задачу
+POST http://localhost:3000/todos
+Content-Type: application/json
+Authorization:  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwiaWF0IjoxNzczMjQxMTQ2LCJleHAiOjE3NzM4NDU5NDZ9.NnUNeaUWh8NEeTEtzw7lExm9IrEpYECn5TGfIPyz_58
+
+{
+  "title": "Купить молоко"
+}
+
+### Получить все задачи
+GET http://localhost:3000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwiaWF0IjoxNzczMjQwNTgxLCJleHAiOjE3NzM4NDUzODF9.igGmsVHNBGy-bh2bgiIMz_kvhcBgwpZ0lx8MgpiH4zQ
+
+### Получить одну задачу
+GET http://localhost:3000/todos/1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwiaWF0IjoxNzczMjQwNTgxLCJleHAiOjE3NzM4NDUzODF9.igGmsVHNBGy-bh2bgiIMz_kvhcBgwpZ0lx8MgpiH4zQ
+
+### Обновить задачу
+PATCH http://localhost:3000/todos/1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwiaWF0IjoxNzczMjQwNTgxLCJleHAiOjE3NzM4NDUzODF9.igGmsVHNBGy-bh2bgiIMz_kvhcBgwpZ0lx8MgpiH4zQ
+
+{
+  "title": "Купить кефир",
+  "isDone": true
+}
+
+### Удалить задачу
+DELETE http://localhost:3000/todos/1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwiaWF0IjoxNzczMjQwNTgxLCJleHAiOjE3NzM4NDUzODF9.igGmsVHNBGy-bh2bgiIMz_kvhcBgwpZ0lx8MgpiH4zQ
