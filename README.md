@@ -22,7 +22,6 @@ NestJS + TypeORM + PostgreSQL + JWT
 
 ```
 
-**И создай `.env.example`** — чтобы показать какие переменные нужны, но без реальных значений:
 ```
 
 DB_HOST=localhost
