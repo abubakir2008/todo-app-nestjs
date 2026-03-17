@@ -20,12 +20,10 @@ export class AuthService {
 
   async register(dto: AuthDto) {
     const exists = await this.userPepo.findOne({ where: { email: dto.email } });
-    if (exists) throw new BadRequestException('Почта Уже занят ');
-
+    if (exists) throw new BadRequestException('Почта Уже занята');
     const hash = await bcrypt.hash(dto.password, 10);
     const user = this.userPepo.create({ email: dto.email, password: hash });
     await this.userPepo.save(user);
-
     return { message: 'Пользователь создан' };
   }
 

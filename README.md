@@ -20,10 +20,6 @@ NestJS + TypeORM + PostgreSQL + JWT
 | PATCH  | /todos/:id     | Обновить    |
 | DELETE | /todos/:id     | Удалить     |
 
-```
-
-```
-
 DB_HOST=localhost
 DB_PORT=5432
 DB_USER=postgres

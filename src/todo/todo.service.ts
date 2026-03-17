@@ -35,7 +35,7 @@ export class TodoService {
     return this.todoRepo.save(todo);
   }
 
-  async remove(id: number, userID: number) {
+  async delete(id: number, userID: number) {
     const todo = await this.findOne(id, userID);
     await this.todoRepo.remove(todo);
     return { message: 'задача удалена' };
