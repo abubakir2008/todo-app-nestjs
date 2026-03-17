@@ -46,6 +46,6 @@ export class TodoController {
 
   @Delete(':id')
   remove(@Param('id', ParseIntPipe) id: number, @Request() req) {
-    return this.todoService.remove(id, req.user.id);
+    return this.todoService.delete(id, req.user.id);
   }
 }
