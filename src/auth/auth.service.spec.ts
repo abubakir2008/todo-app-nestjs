@@ -28,7 +28,6 @@ describe('AuthService', () => {
 
     service = module.get<AuthService>(AuthService);
 
-    // Очищаем моки перед каждым тестом
     jest.clearAllMocks();
   });
 
